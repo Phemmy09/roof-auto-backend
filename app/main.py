@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.routers import jobs, documents, formulas, exports
 
-app = FastAPI(title="Roof Auto API", version="1.0.0")
+app = FastAPI(title="Roof Auto API", version="1.0.0", redirect_slashes=False)
 
 app.add_middleware(
     CORSMiddleware,
